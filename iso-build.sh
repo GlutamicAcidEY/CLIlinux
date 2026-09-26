@@ -2,9 +2,9 @@
 
 set -e
 
-PROJECT=~/mydos
+PROJECT=~/CLIlinux
 
-echo "=== Building MYDOS Linux ==="
+echo "=== Building CLIlinux ==="
 
 echo "[1/5] Compiling /init..."
 gcc -static \
@@ -46,7 +46,7 @@ cp "$PROJECT/kernel-src/arch/x86/boot/bzImage" "$PROJECT/iso/boot/vmlinuz"
 cp "$PROJECT/build/initramfs.cpio" "$PROJECT/iso/boot/initramfs.img"
 
 cat > "$PROJECT/iso/boot/grub/grub.cfg" << 'EOF'
-menuentry "MYDOS Linux" {
+menuentry "CLIlinux" {
     linux /boot/vmlinuz console=ttyS0
     initrd /boot/initramfs.img
 }
@@ -60,8 +60,8 @@ echo "[3.5/5] ISO created: $PROJECT/mydos.iso"
 cd "$PROJECT"
 
 echo "[4/5] Choose boot method:"
-echo "1) QEMU from ISO"
-echo "2) QEMU from initramfs (faster)"
+echo "1) QEMU from ISO (slower)"
+echo "2) QEMU from initramfs (fastest)"
 echo "3) Skip boot"
 
 read -p "Selection (1-3): " choice
