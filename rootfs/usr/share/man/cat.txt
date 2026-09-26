@@ -1,0 +1,26 @@
+CAT(1)                  CLIlinux Manual                  CAT(1)
+
+NAME
+    cat - concatenate files and print them to standard output
+
+SYNOPSIS
+    cat FILE...
+
+DESCRIPTION
+    Read files and write their contents to standard output.
+
+    Multiple files are printed in the order given.
+
+EXAMPLES
+    cat hello.txt
+        Display the contents of hello.txt.
+
+    cat file1.txt file2.txt
+        Display contents of file1.txt and file2.txt
+
+ERRORS
+    If a file cannot be opened, cat prints an error message
+    and continues with the next file.
+
+SEE ALSO
+    man(1), ls(1)

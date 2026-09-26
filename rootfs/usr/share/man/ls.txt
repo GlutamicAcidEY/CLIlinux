@@ -1,0 +1,22 @@
+LS(1)                  CLIlinux Manual                  LS(1)
+
+NAME
+    ls - list directory contents
+
+SYNOPSIS
+    ls [OPTIONS] [PATH]
+
+DESCRIPTION
+    List information about files and directories.
+
+OPTIONS
+    -a
+        Show all files.
+
+    -l
+        Use long listing format.
+
+EXAMPLES
+    ls (list [] [. (cwd)]
+    ls /etc (list [] [/etc]
+    ls -la /etc (list [long, all,] [/etc]
