@@ -52,10 +52,10 @@ menuentry "CLIlinux" {
 }
 EOF
 
-grub-mkrescue -o "$PROJECT/mydos.iso" "$PROJECT/iso/" 2>/dev/null || \
+grub-mkrescue -o "$PROJECT/cli-linux.iso" "$PROJECT/iso/" 2>/dev/null || \
     echo "Warning: grub-mkrescue failed. Install: sudo apt install grub-pc-bin xorriso"
 
-echo "[3.5/5] ISO created: $PROJECT/mydos.iso"
+echo "[3.5/5] ISO created: $PROJECT/cli-linux.iso"
 
 cd "$PROJECT"
 
