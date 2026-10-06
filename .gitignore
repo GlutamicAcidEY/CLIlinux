@@ -1,0 +1,5 @@
+./rootfs
+./build
+./kernel-src
+*.o
+*.iso
